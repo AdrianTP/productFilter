@@ -13,7 +13,6 @@
  * +	Each tag checkbox must have a data-tag="" attribute containing its tag value
  * +	List of products must be a collection of elements
  * +	Each product list item must have a data-tags="" attribute containing a list of tags applicable to the product; the list may be space-separated or comma-separated
- * +	A CSS class of "active" will be applied to every <label></label> whose target <input type="checkbox" /> is checked -- this is so you can hide the checkboxes and apply a style to selected tags
  * Example Usage:
  *		$(".product").productFilter(".tag", { operator: "OR" })
  * Explanation:
@@ -69,7 +68,6 @@
 			$label = $input.siblings("label"),
 			checked = ($input.is(":checked"));
 		
-		//$label.toggleClass("active", checked); // Not necessary with proper HTML structure and CSS sibling selector
 		updateVisibleProducts(getActiveFilters());
 	}
 	
