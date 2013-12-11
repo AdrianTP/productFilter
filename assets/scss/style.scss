@@ -1,0 +1,116 @@
+/**
+ * Author:	Adrian Thomas-Prestemon
+ * Website:	adriantp.com
+ * Created:	2013-12-09
+ * Updated:	2013-12-10
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	&:focus {
+		outline: 1px dotted #FFF;
+	}
+}
+
+body {
+	background-color: #000;
+}
+
+li {
+	list-style: none;
+}
+
+.project-wrapper {
+	position: absolute;
+	z-index: 1;
+	top: 0; right: 0; bottom: 0; left: 0;
+	border: 1px solid #000;
+}
+
+.filters {
+	white-space: nowrap;
+	padding: 10px;
+}
+
+.filter {
+	display: inline-block;
+	white-space: normal;
+	input[type="checkbox"] {
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+		&:checked + label {
+			border-color: #00F;
+			background-color: #0FF;
+		}
+		&:focus + label {
+			outline: 1px dotted #FFF;
+		}
+	}
+	label {
+		background-color: #CCC;
+		color: #000;
+		border: 1px solid #FFF;
+		padding: 5px 10px;
+		margin: 2px;
+		cursor: pointer;
+		& + input:checked,
+		& + input:selected {
+			border-color: #00F;
+			background-color: #0FF;
+		}
+		&:hover {
+			border-color: #000;
+		}
+	}
+}
+
+.products {
+	/*white-space: nowrap;*/
+	width: 900px;
+	padding: 0;
+	overflow: hidden;
+	float: none;
+	clear: both;
+}
+
+.product {
+	/*display: inline-block;*/
+	/*white-space: normal;*/
+	float: left;
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin: 10px 0 0 10px;
+	background-color: #CCC;
+	border: 1px solid #000;
+	overflow: hidden;
+	.background {
+		position: absolute;
+		z-index: 1;
+		top: 0; right: 0; bottom: 0; left: 0;
+		margin: auto;
+	}
+	.info {
+		position: absolute;
+		z-index: 2;
+		top: 60%; right: 0; bottom: 0; left: 0;
+		margin: auto;
+		padding: 5px;
+		text-align: center;
+		background-color: rgba(0,0,0,0.6);
+		* {
+			color: #FFF;
+			text-decoration: none;
+		}
+	}
+}

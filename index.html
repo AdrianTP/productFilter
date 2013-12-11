@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+
+<head>
+	
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
+<title></title>
+
+<link rel="stylesheet" href="assets/css/style.css" />
+
+</head>
+
+<body>
+
+<div class="project-wrapper">
+	<form name="filters" action="#">
+		<ul class="filters">
+			<li class="filter"><input type="checkbox" id="sleeping" name="sleeping" data-tag="sleeping" value="sleeping" /><label for="sleeping" title="cats who are asleep">sleeping</label></li>
+			<li class="filter"><input type="checkbox" id="awake" name="awake" data-tag="awake" value="awake" /><label for="awake" title="cats who are awake">awake</label></li>
+			<li class="filter"><input type="checkbox" id="sitting" name="sitting" data-tag="sitting" value="sitting" /><label for="sitting" title="cats who are sitting">sitting</label></li>
+			<li class="filter"><input type="checkbox" id="standing" name="standing" data-tag="standing" value="standing" /><label for="standing" title="cats who are standing">standing</label></li>
+			<li class="filter"><input type="checkbox" id="lazy" name="lazy" data-tag="lazy" value="lazy" /><label for="lazy" title="cats who are lying down">lazy</label></li>
+		</ul>
+	</form>
+
+	<ul class="products tiles grid">
+		<li class="product tile" data-tags="sleeping,lazy">
+			<img class="background" src="//www.placekitten.com/g/200/200" /><!-- or background-image on parent <li/> -->
+			<div class="info">
+				<h4>Product Title</h4>
+				<p class="description">sleeping lazy</p>
+				<a href="#">Product Link</a>
+			</div>
+		</li>
+		<li class="product tile" data-tags="awake,sitting">
+			<img class="background" src="//www.placekitten.com/g/199/199" /><!-- or background-image on parent <li/> -->
+			<div class="info">
+				<h4>Product Title</h4>
+				<p class="description">awake sitting</p>
+				<a href="#">Product Link</a>
+			</div>
+		</li>
+		<li class="product tile" data-tags="awake,sitting">
+			<img class="background" src="//www.placekitten.com/g/198/198" /><!-- or background-image on parent <li/> -->
+			<div class="info">
+				<h4>Product Title</h4>
+				<p class="description">awake sitting</p>
+				<a href="#">Product Link</a>
+			</div>
+		</li>
+		<li class="product tile" data-tags="awake,standing">
+			<img class="background" src="//www.placekitten.com/g/197/197" /><!-- or background-image on parent <li/> -->
+			<div class="info">
+				<h4>Product Title</h4>
+				<p class="description">awake standing</p>
+				<a href="#">Product Link</a>
+			</div>
+		</li>
+		<li class="product tile" data-tags="awake,sitting">
+			<img class="background" src="//www.placekitten.com/g/200/199" /><!-- or background-image on parent <li/> -->
+			<div class="info">
+				<h4>Product Title</h4>
+				<p class="description">awake sitting</p>
+				<a href="#">Product Link</a>
+			</div>
+		</li>
+		<li class="product tile" data-tags="awake,lazy">
+			<img class="background" src="//www.placekitten.com/g/200/201" /><!-- or background-image on parent <li/> -->
+			<div class="info">
+				<h4>Product Title</h4>
+				<p class="description">awake lazy</p>
+				<a href="#">Product Link</a>
+			</div>
+		</li>
+		<li class="product tile" data-tags="awake,lazy">
+			<img class="background" src="//www.placekitten.com/g/200/197" /><!-- or background-image on parent <li/> -->
+			<div class="info">
+				<h4>Product Title</h4>
+				<p class="description">awake lazy</p>
+				<a href="#">Product Link</a>
+			</div>
+		</li>
+		<li class="product tile" data-tags="awake,sitting">
+			<img class="background" src="//www.placekitten.com/g/200/196" /><!-- or background-image on parent <li/> -->
+			<div class="info">
+				<h4>Product Title</h4>
+				<p class="description">awake sitting</p>
+				<a href="#">Product Link</a>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="assets/js/jQuery.productFilter.js"></script>
+<script>
+$(document).ready(function() {
+	var productFilter = $(".products .product").productFilter(".filters .filter");
+});
+</script>
+
+</body>
+
+</html>
