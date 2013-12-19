@@ -1,9 +1,9 @@
 /**
- * Name:	Product Filter jQuery Plugin
+ * Name:		Product Filter jQuery Plugin
  * Author:	Adrian Thomas-Prestemon
  * Website:	adriantp.com
  * Created:	2013-12-09
- * Updated:	2013-12-10
+ * Updated:	2013-12-18
  * 
  * Description:
  *		This plugin was written for allegorypens.com
@@ -25,11 +25,12 @@
  *		c.	filters {jQuery Collection} - you may override the filter list you specified when you called the plugin
  */
 (function($) {
+	"use strict";
 	var settings = {};
 	
 	function getActiveFilters() {
 		var active = [];
-		settings.filters.each(function() {
+		settings.$filters.each(function() {
 			var filter = $(this).children('input[type="checkbox"]');
 
 			if (filter.is(":checked")) {
@@ -41,7 +42,7 @@
 	
 	function updateVisibleProducts(active) {
 		if (active.length > 0) {
-			settings.products.each(function() {
+			settings.$products.each(function() {
 				var $prod = $(this),
 					tags = $prod.data("tags"),
 					matches = 0,
@@ -57,28 +58,24 @@
 				}
 			});
 		} else {
-			settings.products.each(function() {
+			settings.$products.each(function() {
 				$(this).show();
 			});
 		}
 	}
 	
 	function change(e) {
-		var $input = $(e.target),
-			$label = $input.siblings("label"),
-			checked = ($input.is(":checked"));
-		
 		updateVisibleProducts(getActiveFilters());
 	}
 	
 	$.fn.productFilter = function(filterSelector, opts) {
 		settings = $.extend(settings, {
 			operator: "AND",
-			products: $(this),
-			filters: $(filterSelector)
+			$products: $(this),
+			$filters: $(filterSelector)
 		}, opts);
 		
-		settings.filters.each(function() {
+		settings.$filters.each(function() {
 			$(this).on("change.tag", change);
 		});
 	};
