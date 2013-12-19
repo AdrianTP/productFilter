@@ -4,7 +4,7 @@
 <head>
 	
 <meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 
 <title></title>
 
@@ -15,13 +15,14 @@
 <body>
 
 <div class="project-wrapper">
+	<div id="tooltipContainer"></div>
 	<form name="filters" action="#">
 		<ul class="filters">
-			<li class="filter"><input type="checkbox" id="sleeping" name="sleeping" data-tag="sleeping" value="sleeping" /><label for="sleeping" title="cats who are asleep">sleeping</label></li>
-			<li class="filter"><input type="checkbox" id="awake" name="awake" data-tag="awake" value="awake" /><label for="awake" title="cats who are awake">awake</label></li>
-			<li class="filter"><input type="checkbox" id="sitting" name="sitting" data-tag="sitting" value="sitting" /><label for="sitting" title="cats who are sitting">sitting</label></li>
-			<li class="filter"><input type="checkbox" id="standing" name="standing" data-tag="standing" value="standing" /><label for="standing" title="cats who are standing">standing</label></li>
-			<li class="filter"><input type="checkbox" id="lazy" name="lazy" data-tag="lazy" value="lazy" /><label for="lazy" title="cats who are lying down">lazy</label></li>
+			<li class="filter"><input type="checkbox" id="sleeping" name="sleeping" data-tag="sleeping" value="sleeping" /><label for="sleeping">sleeping <a href="#" data-tooltip="cats who are asleep">(?)</a></label></li>
+			<li class="filter"><input type="checkbox" id="awake" name="awake" data-tag="awake" value="awake" /><label for="awake">awake <a href="#" data-tooltip="cats who are awake">(?)</a></label></li>
+			<li class="filter"><input type="checkbox" id="sitting" name="sitting" data-tag="sitting" value="sitting" /><label for="sitting">sitting <a href="#" data-tooltip="cats who are sitting">(?)</a></label></li>
+			<li class="filter"><input type="checkbox" id="standing" name="standing" data-tag="standing" value="standing" /><label for="standing">standing <a href="#" data-tooltip="cats who are standing">(?)</a></label></li>
+			<li class="filter"><input type="checkbox" id="lazy" name="lazy" data-tag="lazy" value="lazy" /><label for="lazy">lazy <a href="#" data-tooltip="cats who are lying down">(?)</a></label></li>
 		</ul>
 	</form>
 
@@ -95,9 +96,11 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="assets/js/jQuery.productFilter.js"></script>
+<script src="assets/js/jQuery.staticTooltip.js"></script>
 <script>
 $(document).ready(function() {
 	var productFilter = $(".products .product").productFilter(".filters .filter");
+	var tooltips = $(".filter a[data-tooltip]").staticTooltip("#tooltipContainer");
 });
 </script>
 

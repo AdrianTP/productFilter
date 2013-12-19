@@ -2,28 +2,23 @@
  * Author:	Adrian Thomas-Prestemon
  * Website:	adriantp.com
  * Created:	2013-12-09
- * Updated:	2013-12-10
+ * Updated:	2013-12-18
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/fun\/pro\/allegorypens\/widgets\/productFilter\/assets\/scss\/style\.scss}line{font-family:\000038}}
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/fun\/pro\/allegorypens\/widgets\/productFilter\/assets\/scss\/style\.scss}line{font-family:\0000314}}
   *:focus {
     outline: 1px dotted #FFF; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/fun\/pro\/allegorypens\/widgets\/productFilter\/assets\/scss\/style\.scss}line{font-family:\0000319}}
 body {
   background-color: #000; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/fun\/pro\/allegorypens\/widgets\/productFilter\/assets\/scss\/style\.scss}line{font-family:\0000323}}
 li {
   list-style: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/fun\/pro\/allegorypens\/widgets\/productFilter\/assets\/scss\/style\.scss}line{font-family:\0000327}}
 .project-wrapper {
   position: absolute;
   z-index: 1;
@@ -33,16 +28,23 @@ li {
   left: 0;
   border: 1px solid #000; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/fun\/pro\/allegorypens\/widgets\/productFilter\/assets\/scss\/style\.scss}line{font-family:\0000334}}
+#tooltipContainer {
+  display: table-cell;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #000;
+  color: #FFF;
+  border: 1px solid #FFF; }
+
 .filters {
   white-space: nowrap;
   padding: 10px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/fun\/pro\/allegorypens\/widgets\/productFilter\/assets\/scss\/style\.scss}line{font-family:\0000339}}
 .filter {
   display: inline-block;
   white-space: normal; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/fun\/pro\/allegorypens\/widgets\/productFilter\/assets\/scss\/style\.scss}line{font-family:\0000342}}
   .filter input[type="checkbox"] {
     border: 0;
     clip: rect(0 0 0 0);
@@ -52,14 +54,11 @@ li {
     padding: 0;
     position: absolute;
     width: 1px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/fun\/pro\/allegorypens\/widgets\/productFilter\/assets\/scss\/style\.scss}line{font-family:\0000351}}
     .filter input[type="checkbox"]:checked + label {
       border-color: #00F;
       background-color: #0FF; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/fun\/pro\/allegorypens\/widgets\/productFilter\/assets\/scss\/style\.scss}line{font-family:\0000355}}
     .filter input[type="checkbox"]:focus + label {
       outline: 1px dotted #FFF; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/fun\/pro\/allegorypens\/widgets\/productFilter\/assets\/scss\/style\.scss}line{font-family:\0000359}}
   .filter label {
     background-color: #CCC;
     color: #000;
@@ -67,15 +66,12 @@ li {
     padding: 5px 10px;
     margin: 2px;
     cursor: pointer; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/fun\/pro\/allegorypens\/widgets\/productFilter\/assets\/scss\/style\.scss}line{font-family:\0000367}}
     .filter label + input:checked, .filter label + input:selected {
       border-color: #00F;
       background-color: #0FF; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/fun\/pro\/allegorypens\/widgets\/productFilter\/assets\/scss\/style\.scss}line{font-family:\0000371}}
     .filter label:hover {
       border-color: #000; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/fun\/pro\/allegorypens\/widgets\/productFilter\/assets\/scss\/style\.scss}line{font-family:\0000377}}
 .products {
   /*white-space: nowrap;*/
   width: 900px;
@@ -84,7 +80,6 @@ li {
   float: none;
   clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/fun\/pro\/allegorypens\/widgets\/productFilter\/assets\/scss\/style\.scss}line{font-family:\0000386}}
 .product {
   /*display: inline-block;*/
   /*white-space: normal;*/
@@ -96,7 +91,6 @@ li {
   background-color: #CCC;
   border: 1px solid #000;
   overflow: hidden; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/fun\/pro\/allegorypens\/widgets\/productFilter\/assets\/scss\/style\.scss}line{font-family:\0000397}}
   .product .background {
     position: absolute;
     z-index: 1;
@@ -105,7 +99,6 @@ li {
     bottom: 0;
     left: 0;
     margin: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/fun\/pro\/allegorypens\/widgets\/productFilter\/assets\/scss\/style\.scss}line{font-family:\00003103}}
   .product .info {
     position: absolute;
     z-index: 2;
@@ -117,7 +110,6 @@ li {
     padding: 5px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.6); }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/fun\/pro\/allegorypens\/widgets\/productFilter\/assets\/scss\/style\.scss}line{font-family:\00003111}}
     .product .info * {
       color: #FFF;
       text-decoration: none; }
